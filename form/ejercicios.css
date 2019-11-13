@@ -1,0 +1,41 @@
+p:not(.nota)::first-letter {
+    font-size: 250%;
+    color: solid;
+    color: blue;
+    text-transform: uppercase
+   }
+
+p::selection { 
+    color: gold;
+    background: red
+} 
+
+
+h1::before{
+    content: "Esto es";
+    color: blue
+}
+
+h2::after{
+    content: " after";
+    color: red
+}
+
+input::placeholder {
+    color: white;
+    background: black;
+    font-size: 1em;
+    text-align: center
+   }
+
+.nota{
+    display: list-item;
+    counter-increment: none;
+    width: 80%;
+    margin: 5%
+}
+
+p.nota::marker {
+    content: "Note " counter(note-counter) ":";
+    text-align: left;
+   }
